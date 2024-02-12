@@ -41,4 +41,4 @@ def read_counter(name):
 def delete_counter(name):
     if name in COUNTERS:
         COUNTERS.pop(name)
-    return name, status.HTTP_204_NO_CONTENT
+        return name, status.HTTP_204_NO_CONTENT
