@@ -35,3 +35,12 @@ def read_counter(name):
     if name not in COUNTERS:
         COUNTERS[name] = 0
     return {name: COUNTERS[name]}, status.HTTP_200_OK
+
+
+@app.route('counters/<name>', methods=['DELETE'])
+def delete_counter(name):
+    if name in COUNTERS:
+        COUNTERS.remove(name)
+    if name not in COUNTERS:
+        return status.HTTP_204_NO_CONTENT
+    
