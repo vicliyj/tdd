@@ -43,4 +43,3 @@ def delete_counter(name):
         COUNTERS.remove(name)
     if name not in COUNTERS:
         return status.HTTP_204_NO_CONTENT
-    
