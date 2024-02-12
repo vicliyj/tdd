@@ -41,4 +41,4 @@ def read_counter(name):
 def delete_counter(name):
     if name in COUNTERS:
         COUNTERS.remove(name)
-        return status.HTTP_204_NO_CONTENT
+        return {name: COUNTERS[name]}, status.HTTP_204_NO_CONTENT
