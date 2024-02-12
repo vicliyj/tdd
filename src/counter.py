@@ -41,5 +41,4 @@ def read_counter(name):
 def delete_counter(name):
     if name in COUNTERS:
         COUNTERS.remove(name)
-    if name not in COUNTERS:
         return status.HTTP_204_NO_CONTENT
