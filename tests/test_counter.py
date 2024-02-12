@@ -63,5 +63,6 @@ class CounterTest(TestCase):
         """Testing if counter is deleted"""
         client = app.test_client()
         result = client.post('/counters/zoo')
+        self.assertEqual(result.status_code, status.HTTP_201_CREATED)
         result2 = client.delete('zoo')
         self.assertEqual(result2.status_code, status.HTTP_204_NO_CONTENT)
